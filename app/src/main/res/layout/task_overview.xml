@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/taskBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/show"
+        android:layout_width="384dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/top_task_open"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/TaskIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/icon_pic"
+        app:layout_constraintBottom_toBottomOf="@+id/show"
+        app:layout_constraintEnd_toEndOf="@+id/show"
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintStart_toStartOf="@+id/show"
+        app:layout_constraintTop_toTopOf="@+id/show"
+        app:layout_constraintVertical_bias="0.428"
+        app:srcCompat="@drawable/icon1" />
+
+    <TextView
+        android:id="@+id/ousideComboDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100天"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/taskRecycler"
+        app:layout_constraintEnd_toEndOf="@+id/switchContent"
+        app:layout_constraintStart_toStartOf="@+id/switchContent"
+        app:layout_constraintTop_toTopOf="@+id/show"
+        app:layout_constraintVertical_bias="0.866" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="3dp"
+        android:layout_height="50dp"
+        android:layout_margin="3dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/show"
+        app:layout_constraintEnd_toEndOf="@+id/show"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="@+id/show"
+        app:layout_constraintTop_toTopOf="@+id/show"
+        app:layout_constraintVertical_bias="0.583" />
+
+    <Switch
+        android:id="@+id/switchContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:showText="true"
+        android:textOff="@string/open"
+        android:textOn="@string/close"
+        android:thumb="@drawable/switch_thumb"
+        android:track="@drawable/switch_track"
+        app:layout_constraintBottom_toTopOf="@+id/ousideComboDay"
+        app:layout_constraintEnd_toEndOf="@+id/show"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/show"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/taskContent"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center|right|center_horizontal|left"
+        android:text="@string/test"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/TaskIcon"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/TaskIcon"
+        app:layout_constraintTop_toTopOf="@+id/TaskIcon" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/taskRecycler"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/show"
+        app:layout_constraintVertical_bias="0.045"
+        tools:listitem="@layout/inside_task" />
+
+    <TextView
+        android:id="@+id/deleteTask"
+        android:layout_width="44dp"
+        android:layout_height="28dp"
+        android:background="@drawable/delete_use"
+        android:gravity="center"
+        android:text="@string/delete"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/ousideComboDay"
+        app:layout_constraintEnd_toEndOf="@+id/show"
+        app:layout_constraintStart_toEndOf="@+id/switchContent"
+        app:layout_constraintTop_toTopOf="@+id/switchContent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

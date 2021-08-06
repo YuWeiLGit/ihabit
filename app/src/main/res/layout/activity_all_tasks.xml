@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Theme_Twine"
+    tools:context=".activity.AllTasksActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allTaskRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/notaskImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/actorframe" />
+
+    <TextView
+        android:id="@+id/notask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notask"
+
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/allTaskRecycler" />
+
+    <TextView
+        android:id="@+id/notask2"
+        android:layout_width="95dp"
+        android:layout_height="34dp"
+        android:background="@drawable/done_button"
+        android:gravity="center"
+        android:text="@string/add_now"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/notaskImg"
+        app:layout_constraintEnd_toEndOf="@+id/notask"
+        app:layout_constraintStart_toStartOf="@+id/notask"
+        app:layout_constraintTop_toBottomOf="@+id/notask" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

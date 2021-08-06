@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Theme_Twine"
+    tools:context=".activity.AssignActivity">
+
+    <TextView
+        android:id="@+id/insideNewAccountDone"
+        android:layout_width="173dp"
+        android:layout_height="62dp"
+        android:background="@drawable/done_button"
+        android:gravity="center"
+        android:text="@string/done"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/enterpassword"
+        app:layout_constraintStart_toStartOf="@+id/enterpassword"
+        app:layout_constraintTop_toBottomOf="@+id/enterpassword" />
+
+    <ImageView
+        android:id="@+id/warrior"
+        android:layout_width="138dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/careerDes"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/careerDes"
+        app:layout_constraintTop_toBottomOf="@+id/careerDes"
+        app:srcCompat="@drawable/attack3__81542" />
+
+    <EditText
+        android:id="@+id/entername"
+        android:layout_width="327dp"
+        android:layout_height="45dp"
+        android:autofillHints="請輸入帳號"
+        android:background="@drawable/enter_text"
+        android:gravity="center"
+        android:lines="1"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView48" />
+
+    <EditText
+        android:id="@+id/enteremail"
+        android:layout_width="328dp"
+        android:layout_height="44dp"
+        android:autofillHints="請輸入帳號"
+        android:background="@drawable/enter_text"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        android:lines="1"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/entername"
+        app:layout_constraintStart_toStartOf="@+id/entername"
+        app:layout_constraintTop_toBottomOf="@+id/imageView50" />
+
+    <EditText
+        android:id="@+id/enterpassword"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:background="@drawable/enter_text"
+        android:gravity="center"
+        android:lines="1"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="@+id/enteremail"
+        app:layout_constraintStart_toStartOf="@+id/enteremail"
+        app:layout_constraintTop_toBottomOf="@+id/imageView49" />
+
+    <TextView
+        android:id="@+id/vaildEmail"
+        android:layout_width="87dp"
+        android:layout_height="32dp"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:text="@string/vaild_email"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView16"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+    <ImageView
+        android:id="@+id/imageView48"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:srcCompat="@drawable/icon_coin" />
+
+    <ImageView
+        android:id="@+id/imageView49"
+        android:layout_width="52dp"
+        android:layout_height="43dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView50"
+        app:layout_constraintStart_toStartOf="@+id/imageView50"
+        app:layout_constraintTop_toBottomOf="@+id/enteremail"
+        app:srcCompat="@drawable/icon_key" />
+
+    <ImageView
+        android:id="@+id/imageView50"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView48"
+        app:layout_constraintStart_toStartOf="@+id/imageView48"
+        app:layout_constraintTop_toBottomOf="@+id/entername"
+        app:srcCompat="@drawable/icon_message" />
+
+    <TextView
+        android:id="@+id/careerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/warrior"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/careerDes"
+        android:layout_width="317dp"
+        android:layout_height="109dp"
+        android:text="@string/warrior_des"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/careerName" />
+
+    <ImageView
+        android:id="@+id/careerleft"
+        android:layout_width="46dp"
+        android:layout_height="99dp"
+        app:layout_constraintBottom_toBottomOf="@+id/warrior"
+        app:layout_constraintEnd_toStartOf="@+id/warrior"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/warrior"
+        app:srcCompat="@drawable/ic_baseline_arrow_left_24" />
+
+    <ImageView
+        android:id="@+id/careerright"
+        android:layout_width="51dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/warrior"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toEndOf="@+id/warrior"
+        app:layout_constraintTop_toTopOf="@+id/warrior"
+        app:srcCompat="@drawable/ic_baseline_arrow_right_24" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暱稱"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView48"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView48"
+        app:layout_constraintTop_toTopOf="@+id/imageView48" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="註冊帳號"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView50"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView50"
+        app:layout_constraintTop_toTopOf="@+id/imageView50" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密碼"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView49"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toEndOf="@+id/imageView49"
+        app:layout_constraintTop_toTopOf="@+id/imageView49" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="31dp"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="381dp"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="315dp"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
